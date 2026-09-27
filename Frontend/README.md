@@ -1,16 +1,64 @@
-# React + Vite
+# 🧠 SupportMind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Memory-Powered AI Customer Support Agent
 
-Currently, two official plugins are available:
+SupportMind is an AI-powered customer support application that remembers
+previous customer interactions and uses relevant memories to provide
+more personalized and contextual responses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Unlike a basic chatbot that treats every conversation independently,
+SupportMind uses **Hindsight memory** to recall relevant information
+from previous customer interactions.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 Problem Statement
 
-## Expanding the ESLint configuration
+Traditional customer-support chatbots often treat every conversation
+as a new conversation.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This can lead to:
+
+- Repeated questions from customers
+- Loss of previous conversation context
+- Generic responses
+- Poor personalization
+- Inefficient customer support
+
+SupportMind addresses this problem by giving the AI agent a memory
+layer that allows it to recall relevant previous interactions.
+
+---
+
+## 💡 Solution
+
+SupportMind combines:
+
+- **React** for the customer interface
+- **FastAPI** for the backend API
+- **Hindsight** for long-term memory
+- **Groq** for AI-powered response generation
+
+The system retrieves relevant customer memories before generating a
+response and stores the new interaction for future conversations.
+
+---
+
+## ✨ Key Features
+
+### 🧠 Memory-Powered Conversations
+
+SupportMind remembers previous customer interactions and retrieves
+relevant information during future conversations.
+
+### 👤 Dynamic Customer Profiles
+
+The application supports any customer name instead of relying on
+predefined users.
+
+A customer name is converted into a unique customer ID.
+
+Example:
+
+```text
+Priya Sharma → priya-sharma
